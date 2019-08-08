@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import SiteName from '../components/SiteName';
+import HeaderNav from '../components/HeaderNav';
 
 class Project extends Component {
   render() {
-    const { title } = this.props.data.contentfulWork;
+    // const { title } = this.props.data.contentfulWork;
     return (
       <div>
-        <h1>{title}</h1>
+        <SiteName />
+        <HeaderNav />
       </div>
     );
   }

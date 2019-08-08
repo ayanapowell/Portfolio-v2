@@ -59,29 +59,34 @@ function HeaderNav(props) {
     { title: 'About', id: 'nav--about', value: 'about' },
   ];
   return (
-    <div className="navigation">
-      <HeaderNavEl>
-        <NavEl className="nav-list">
-          <div className="nav-list__menu-icon" />
-          <div className="nav-list__inner">
-            <div className="nav-list__list">
-              {navItems.map(item => (
-                <Link
-                  to="/"
-                  className="nav-list__link"
-                  id={item.id}
-                  key={item.id}
-                  onClick={() => {
-                    props.onNavSelection(item.value);
-                  }}
-                >
-                  <span>{item.title}</span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </NavEl>
-      </HeaderNavEl>
+    <div className="container">
+      <div className="row">
+        <div className="offset-sm-1 header-container" />
+        <div className="navigation">
+          <HeaderNavEl>
+            <NavEl className="nav-list">
+              <div className="nav-list__menu-icon" />
+              <div className="nav-list__inner">
+                <div className="nav-list__list">
+                  {navItems.map(item => (
+                    <Link
+                      to="/"
+                      className="nav-list__link"
+                      id={item.id}
+                      key={item.id}
+                      onClick={() => {
+                        props.onNavSelection(item.value);
+                      }}
+                    >
+                      <span>{item.title}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </NavEl>
+          </HeaderNavEl>
+        </div>
+      </div>
     </div>
   );
 }

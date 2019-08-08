@@ -42,13 +42,9 @@ class IndexPage extends React.Component {
       <div>
         <HeroEl>
           <SiteName onNavSelection={this.handleSelectedNavItem} />
-          <div className="container">
-            <div className="row">
-              <div className="offset-sm-1 header-container">
-                <HeaderNav onNavSelection={this.handleSelectedNavItem} />
-              </div>
-            </div>
-          </div>
+
+          <HeaderNav onNavSelection={this.handleSelectedNavItem} />
+
           <div className="container">
             <div className="row">
               <div className="offset-sm-1">

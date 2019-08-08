@@ -91,7 +91,7 @@ class ProjectNavigation extends React.Component {
                 <div className="project-nav__nav-list">
                   {this.props.allProjects.map(e => (
                     <Link
-                      to="/"
+                      to={`project/${e.node.slug}`}
                       key={e.node.id}
                       className="project-nav__link"
                       onMouseEnter={() => this.handleFocusedItem(e)}
